@@ -10,7 +10,7 @@ TEST_FILE=(
     "tests/test4.txt"
 )
 
-s21_cat="./s21_cat"
+my_cat="./my_cat"
 cat="cat"
 
 flags=(
@@ -39,10 +39,10 @@ do
         (( COUNTER++ ))
         TEST1="$var1 $var2"
         
-        $s21_cat $TEST1 > test_result_s21_cat.txt
+        $my_cat $TEST1 > test_result_my_cat.txt
         $cat $TEST1 > test_result_cat.txt
-        DIFF_RES="$(diff -s test_result_s21_cat.txt test_result_cat.txt)"
-        if [ "$DIFF_RES" == "Files test_result_s21_cat.txt and test_result_cat.txt are identical" ]
+        DIFF_RES="$(diff -s test_result_my_cat.txt test_result_cat.txt)"
+        if [ "$DIFF_RES" == "Files test_result_my_cat.txt and test_result_cat.txt are identical" ]
             then
                 (( SUCCESS++ ))
                 echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -51,7 +51,7 @@ do
                 (( FAIL++ ))
                 echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
         fi
-        rm test_result_s21_cat.txt test_result_cat.txt
+        rm test_result_my_cat.txt test_result_cat.txt
         
     done
 done
@@ -77,10 +77,10 @@ do
                 (( COUNTER++ ))
                 TEST1="$var1 $var2 $var3"
         
-                $s21_cat $TEST1 > test_result_s21_cat.txt
+                $my_cat $TEST1 > test_result_my_cat.txt
                 $cat $TEST1 > test_result_cat.txt
-                DIFF_RES="$(diff -s test_result_s21_cat.txt test_result_cat.txt)"
-                if [ "$DIFF_RES" == "Files test_result_s21_cat.txt and test_result_cat.txt are identical" ]
+                DIFF_RES="$(diff -s test_result_my_cat.txt test_result_cat.txt)"
+                if [ "$DIFF_RES" == "Files test_result_my_cat.txt and test_result_cat.txt are identical" ]
                     then
                         (( SUCCESS++ ))
                         echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -89,7 +89,7 @@ do
                         (( FAIL++ ))
                         echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
                 fi
-                rm test_result_s21_cat.txt test_result_cat.txt
+                rm test_result_my_cat.txt test_result_cat.txt
             done
         fi
     done
@@ -116,10 +116,10 @@ do
                 (( COUNTER++ ))
                 TEST1="$var1 $var2 $var3"
         
-                $s21_cat $TEST1 > test_result_s21_cat.txt
+                $my_cat $TEST1 > test_result_my_cat.txt
                 $cat $TEST1 > test_result_cat.txt
-                DIFF_RES="$(diff -s test_result_s21_cat.txt test_result_cat.txt)"
-                if [ "$DIFF_RES" == "Files test_result_s21_cat.txt and test_result_cat.txt are identical" ]
+                DIFF_RES="$(diff -s test_result_my_cat.txt test_result_cat.txt)"
+                if [ "$DIFF_RES" == "Files test_result_my_cat.txt and test_result_cat.txt are identical" ]
                     then
                         (( SUCCESS++ ))
                         echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -128,7 +128,7 @@ do
                         (( FAIL++ ))
                         echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
                 fi
-                rm test_result_s21_cat.txt test_result_cat.txt
+                rm test_result_my_cat.txt test_result_cat.txt
             fi
         done
      done
@@ -166,10 +166,10 @@ do
                         (( COUNTER++ ))
                         TEST1="$var1 $var2 $var3 $var4"
         
-                        $s21_cat $TEST1 > test_result_s21_cat.txt
+                        $my_cat $TEST1 > test_result_my_cat.txt
                         $cat $TEST1 > test_result_cat.txt
-                        DIFF_RES="$(diff -s test_result_s21_cat.txt test_result_cat.txt)"
-                        if [ "$DIFF_RES" == "Files test_result_s21_cat.txt and test_result_cat.txt are identical" ]
+                        DIFF_RES="$(diff -s test_result_my_cat.txt test_result_cat.txt)"
+                        if [ "$DIFF_RES" == "Files test_result_my_cat.txt and test_result_cat.txt are identical" ]
                             then
                                 (( SUCCESS++ ))
                                 echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -178,7 +178,7 @@ do
                                 (( FAIL++ ))
                                 echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
                         fi
-                        rm test_result_s21_cat.txt test_result_cat.txt
+                        rm test_result_my_cat.txt test_result_cat.txt
                      fi
                 done
              done

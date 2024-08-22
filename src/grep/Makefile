@@ -1,13 +1,13 @@
-TARGET1 = s21_grep
+TARGET1 = my_grep
 CC = gcc
 FLAGS =  -Wall -Werror -Wextra -o 
 
 
-$(TARGET1): s21_grep.o
-	$(CC) $(FLAGS) $(TARGET1) s21_grep.o
+$(TARGET1): my_grep.o
+	$(CC) $(FLAGS) $(TARGET1) my_grep.o
 
-s21_grep.o :s21_grep.c
-	$(CC) -c $(FLAGS) s21_grep.o s21_grep.c
+my_grep.o :my_grep.c
+	$(CC) -c $(FLAGS) my_grep.o my_grep.c
 
 clean:
-	rm -rf *.o
+	rm -rf *.o my_grep

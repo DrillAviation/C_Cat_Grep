@@ -6,7 +6,6 @@ The russian version of the task can be found in the repository.
 
 ## Contents
 
-0. [Preamble](#preamble)
 1. [Chapter I](#chapter-i) \
    1.1. [Introduction](#introduction)
 2. [Chapter II](#chapter-ii) \
@@ -18,31 +17,6 @@ The russian version of the task can be found in the repository.
    3.4. [Part 4](#part-4-bonus-implementation-of-grep-utility-flag-combinations)
 
 
-## Preamble
-
-![simple_bash_utils](misc/eng/images/bashutils.png)
-
-It was an ordinary grey autumn day in 1993. You came home from work at Hewlett-Packard, feeling a little tired. You had a small two-room apartment on the outskirts of N town. There was a low-alcohol drink in the refrigerator called "pivo". You took that drink and a bag of crackers then went to your little nook, to your computer made by Dell.
-
-`*Click*` - the power button was pressed. A couple of minutes of boot loading and... yeah, it feels good. You always get that feeling when you turn on a computer. A few seconds of undisturbed pleasure and you opened
-the Mosaic browser. Then you went to your favorite forum, and while drinking pivo, you read some threads. Suddenly you came across a very interesting discussion, which began with the following message:
-
-> Hello everybody out there using minix -
->
->I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones. This has been brewing since april, and is starting to get ready. I'd like any feedback on things people like/dislike in minix, as my OS resembles it somewhat (same physical layout of the file-system (due to practical reasons) among other things).
->
->I've currently ported bash(1.08) and gcc(1.40), and things seem to work. This implies that I'll get something practical within a few months, and I'd like to know what features most people would want. Any suggestions are welcome, but I won't promise I'll implement them :-)
->
->Linus (torvalds@kruuna.helsinki.fi)
->
->PS. Yes - it's free of any minix code, and it has a multi-threaded fs. It is NOT portable (uses 386 task switching etc), and it probably never will support anything other than AT-harddisks, as that's all I have :-(.
->
->— Linus Torvalds
-
-"Very interesting," you thought to yourself. As you scrolled down, you noticed that bash is not that well ported, and some functions didn't work. 
-In particular, there were problems with the utilities for word processing: cat and grep.
-"Interesting task, and it would be great to help this Linus Torvalds," you said aloud and immediately wrote a message in the thread saying that you're already working on it. 
-Well, let’s start!
 
 ## Chapter I
 
@@ -106,7 +80,7 @@ Cat is one of the most frequently used commands on Unix-like operating systems. 
 - Do not use outdated and legacy language constructions and library functions. Pay attention to the legacy and obsolete marks in the official documentation on the language and the libraries used. Use the POSIX.1-2017 standard.
 - When writing code it is necessary to follow the Google style
 - The programs must be executable files with command line arguments
-- The programs must be built with Makefile with appropriate targets: s21_cat, s21_grep
+- The programs must be built with Makefile with appropriate targets: my_cat, my_grep
 - If third-party libraries are used, there must be build scripts in makefile to connect/load them
 - Integration tests must cover all flag variants and input values, based on a comparison with the behavior of real Bash utilities 
 - The programs must be developed according to the principles of structured programming
@@ -120,7 +94,7 @@ Cat is one of the most frequently used commands on Unix-like operating systems. 
 You need to develop a cat utility:
 - Support of all flags (including GNU versions) specified [above](#cat-options)
 - The source, header, and build files must be placed in the src/cat/ directory
-- The resulting executable file must be placed in the directory src/cat/ and named s21_cat
+- The resulting executable file must be placed in the directory src/cat/ and named my_cat
 
 ## Part 2. Working with grep utility
 
@@ -128,7 +102,7 @@ You need to develop the grep utility:
 - Support of the following flags: `-e`, `-i`, `-v`, `-c`, `-l`, `-n`
 - Only pcre or regex libraries can be used for regular expressions
 - The source, header and make files must be placed in the src/grep/ directory
-- The resulting executable file must be placed in the directory src/grep/ and named s21_grep
+- The resulting executable file must be placed in the directory src/grep/ and named my_grep
 
 ## Part 3. Bonus. Implementation of some grep utility flags
 
@@ -136,7 +110,7 @@ Bonus assignment for extra points. You need to develop the grep utility:
 - Support of all flags, including: `-h`, `-s`, `-f`, `-o`
 - Only pcre or regex libraries can be used for regular expressions
 - The source, header and make files must be placed in the src/grep/ directory
-- The resulting executable file must be placed in the directory src/grep/ and named s21_grep
+- The resulting executable file must be placed in the directory src/grep/ and named my_grep
 
 ## Part 4. Bonus. Implementation of grep utility flag combinations
 
@@ -144,10 +118,7 @@ Bonus assignment for extra points. You need to develop the grep utility:
 - Support of all flags, including their _pair_ combinations (e.g. `-iv`, `-in`)
 - Only pcre or regex libraries can be used for regular expressions
 - The source, header and make files must be placed in the src/grep/ directory
-- The resulting executable file must be placed in the directory src/grep/ and named s21_grep
+- The resulting executable file must be placed in the directory src/grep/ and named my_grep
 
-
-
-💡 [Tap here](https://forms.yandex.ru/cloud/64144c1bc09c020aafe7a4f3/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
 
 

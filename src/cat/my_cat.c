@@ -1,4 +1,4 @@
-#include "s21_cat.h"
+#include "my_cat.h"
 
 int main(int argc, char *argv[]) {
   Flag flags = {0};
@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
   for (int i = optind; i < argc; i++) {
     fp = fopen(argv[i], "r");
     if (fp == NULL) {
-      fprintf(stderr, ("s21_cat.c: %s: No such file or directory:\n"), argv[i]);
+      fprintf(stderr, ("my_cat.c: %s: No such file or directory:\n"), argv[i]);
     } else {
       char prev = '\n';
       int count = 1;

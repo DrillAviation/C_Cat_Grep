@@ -1,5 +1,5 @@
-#ifndef S21_GREP
-#define S21_GREP
+#ifndef MY_GREP
+#define MY_GREP
 #include <getopt.h>
 #include <regex.h>
 #include <stdio.h>

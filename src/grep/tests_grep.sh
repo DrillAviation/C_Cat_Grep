@@ -15,7 +15,7 @@ FIND_FILE=(
     "tests/tofind2.txt"
 )
 
-s21_grep="./s21_grep"
+my_grep="./my_grep"
 grep="grep"
 
 
@@ -71,10 +71,10 @@ do
             (( COUNTER++ ))
             TEST1="$var1 $var2 $var3"
 
-            $s21_grep $TEST1 >  test_result_s21_grep.txt
+            $my_grep $TEST1 >  test_result_my_grep.txt
             $grep $TEST1 > test_result_grep.txt
-            DIFF_RES="$(diff -s test_result_s21_grep.txt test_result_grep.txt)"
-            if [ "$DIFF_RES" == "Files test_result_s21_grep.txt and test_result_grep.txt are identical" ]
+            DIFF_RES="$(diff -s test_result_my_grep.txt test_result_grep.txt)"
+            if [ "$DIFF_RES" == "Files test_result_my_grep.txt and test_result_grep.txt are identical" ]
                 then
                     (( SUCCESS++ ))
                     echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -83,7 +83,7 @@ do
                     (( FAIL++ ))
                     echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
             fi
-            rm test_result_s21_grep.txt test_result_grep.txt
+            rm test_result_my_grep.txt test_result_grep.txt
         done
     done
 done
@@ -123,10 +123,10 @@ do
                     (( COUNTER++ ))
                     TEST1="$var1 $var2 $var3 $var4"
 
-                    $s21_grep $TEST1 >  test_result_s21_grep.txt
+                    $my_grep $TEST1 >  test_result_my_grep.txt
                     $grep $TEST1 > test_result_grep.txt
-                    DIFF_RES="$(diff -s test_result_s21_grep.txt test_result_grep.txt)"
-                    if [ "$DIFF_RES" == "Files test_result_s21_grep.txt and test_result_grep.txt are identical" ]
+                    DIFF_RES="$(diff -s test_result_my_grep.txt test_result_grep.txt)"
+                    if [ "$DIFF_RES" == "Files test_result_my_grep.txt and test_result_grep.txt are identical" ]
                         then
                             (( SUCCESS++ ))
                             echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -135,7 +135,7 @@ do
                             (( FAIL++ ))
                             echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
                     fi
-                    rm test_result_s21_grep.txt test_result_grep.txt
+                    rm test_result_my_grep.txt test_result_grep.txt
                 done
             done
         fi
@@ -177,10 +177,10 @@ do
             (( COUNTER++ ))
             TEST1="$var1 $var2 $var3"
 
-            $s21_grep $TEST1 >  test_result_s21_grep.txt
+            $my_grep $TEST1 >  test_result_my_grep.txt
             $grep $TEST1 > test_result_grep.txt
-            DIFF_RES="$(diff -s test_result_s21_grep.txt test_result_grep.txt)"
-            if [ "$DIFF_RES" == "Files test_result_s21_grep.txt and test_result_grep.txt are identical" ]
+            DIFF_RES="$(diff -s test_result_my_grep.txt test_result_grep.txt)"
+            if [ "$DIFF_RES" == "Files test_result_my_grep.txt and test_result_grep.txt are identical" ]
                 then
                     (( SUCCESS++ ))
                     echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -189,7 +189,7 @@ do
                     (( FAIL++ ))
                     echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
             fi
-            rm test_result_s21_grep.txt test_result_grep.txt
+            rm test_result_my_grep.txt test_result_grep.txt
         done
     done
 done
@@ -230,10 +230,10 @@ do
                         (( COUNTER++ ))
                         TEST1="$var1 $var2 $var3 $var4 $var5"
 
-                        $s21_grep $TEST1 >  test_result_s21_grep.txt
+                        $my_grep $TEST1 >  test_result_my_grep.txt
                         $grep $TEST1 > test_result_grep.txt
-                        DIFF_RES="$(diff -s test_result_s21_grep.txt test_result_grep.txt)"
-                        if [ "$DIFF_RES" == "Files test_result_s21_grep.txt and test_result_grep.txt are identical" ]
+                        DIFF_RES="$(diff -s test_result_my_grep.txt test_result_grep.txt)"
+                        if [ "$DIFF_RES" == "Files test_result_my_grep.txt and test_result_grep.txt are identical" ]
                             then
                                 (( SUCCESS++ ))
                                 echo "$COUNTER - \033[32mSUCCESS\033[0m $TEST1"
@@ -242,7 +242,7 @@ do
                                 (( FAIL++ ))
                                 echo "$COUNTER - \033[31mFAIL\033[0m $TEST1"
                         fi
-                        rm test_result_s21_grep.txt test_result_grep.txt
+                        rm test_result_my_grep.txt test_result_grep.txt
                     done
                 fi
             done

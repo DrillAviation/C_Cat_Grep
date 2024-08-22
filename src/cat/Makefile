@@ -1,13 +1,13 @@
-TARGET1 = s21_cat
+TARGET1 = my_cat
 CC = gcc
 FLAGS =  -Wall -Werror -Wextra -o 
 
 
-$(TARGET1): s21_cat.o
-	$(CC) $(FLAGS) $(TARGET1) s21_cat.o
+$(TARGET1): my_cat.o
+	$(CC) $(FLAGS) $(TARGET1) my_cat.o
 
-s21_cat.o :s21_cat.c
-	$(CC) -c $(FLAGS) s21_cat.o s21_cat.c
+my_cat.o :my_cat.c
+	$(CC) -c $(FLAGS) my_cat.o my_cat.c
 
 clean:
-	rm -rf *.o
+	rm -rf *.o my_cat log.txt
