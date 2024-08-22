@@ -119,6 +119,3 @@ Bonus assignment for extra points. You need to develop the grep utility:
 - Only pcre or regex libraries can be used for regular expressions
 - The source, header and make files must be placed in the src/grep/ directory
 - The resulting executable file must be placed in the directory src/grep/ and named my_grep
-
-
-
